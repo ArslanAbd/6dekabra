@@ -31,11 +31,18 @@ namespace WpfApp8
         {
           
            
-            int b = Convert.ToInt32(TbNumberA.Text);
-            if (b % 10 == 7)
-               TextBlockAnswer.Text=("chislo b zakanchivaetsya cifrom 7");
-            else
-                TextBlockAnswer.Text=("chislo b ne zakanchivaetsya cifrom 7");
+             int b = int.Parse(TbNumberA.Text);
+            if (b > 0)
+            {
+                b = b - 8;
+            }
+            else if (b < 0)
+            {
+                b = b ;
+            }
+            
+            MessageBox.Show($" b ={b}", "ответ");
+
 
         }
 
